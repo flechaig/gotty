@@ -27,7 +27,7 @@ export class OurXterm {
 
     constructor(elem: HTMLElement) {
         this.elem = elem;
-        this.term = new Terminal();
+        this.term = new Terminal({ fontFamily: 'MesloLGS NF, monospace', fontSize: 12, letterSpacing: 0 });
         this.fitAddOn = new FitAddon();
         this.zmodemAddon = new ZModemAddon({
             toTerminal: (x: Uint8Array) => this.term.write(x),
